@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>vyOS Management</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="icon" type="image/png" href="assets/img/LogoVyos.png"/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100;300;400&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai&family=Urbanist:wght@300;400&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+		<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+		<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css" />
+		<link rel="stylesheet" type="text/css" href="home-style.css" />
+		<link
+			href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+
+	<body>
+		<div class="sidebar">
+			<div class="logo-details">
+				<img class="bx logo icon" src="/www/assets/img/LogoVyos.png"></i>
+				<div class="logo_name">Welcome</div>
+				<i class="bx bx-menu bx-sm" id="btn"></i>
+			</div>
+			<ul class="nav-list">
+				<li>
+					<a href="#user_management" class="item-link">
+						<i class="bx bx-user"></i>
+						<span class="links_name">User Management</span>
+					</a>
+					<span class="tooltip">User Management</span>
+				</li>
+				<li>
+					<a href="#node_management" class="item-link">
+						<i class='bx bx-server'></i>
+						<span class="links_name">Node Management</span>
+					</a>
+					<span class="tooltip">Node Management</span>
+				</li>
+				<li>
+					<a href="#config_backup" class="item-link">
+						<i class='bx bx-archive-in'></i>
+						<span class="links_name">Config Backup</span>
+					</a>
+					<span class="tooltip">Config Backup</span>
+				</li>
+				<li>
+					<a href="#server_cli" class="item-link">
+						<i class='bx bx-code-alt'></i>
+						<span class="links_name">Server CLI</span>
+					</a>
+					<span class="tooltip">Server CLI</span>
+				</li>
+				<!-- <li class="profile">
+					<div class="profile-details">
+						<img src="profile.jpg" alt="profileImg" />
+						<div class="name_job">
+							<div class="name">Prem Shahi</div>
+							<div class="job">Web designer</div>
+						</div>
+					</div>
+					<i class="bx bx-log-out" id="log_out"></i>
+				</li> -->
+			</ul>
+		</div>
+		<section class="home-section">
+			<div><a class="main-title" onclick="reloadPage()">VyOS Management Tools</a></div>
+			<div class="item">
+				<div class="item-content about" id="about">
+					<div class="content-body">
+						<div class="content-title">About</div>
+						<hr class="hr-line">
+						<div class="content-word">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+						</div>
+				</div>
+				<div class="item-content user_management" id="user_management">
+					<div class="content-body">
+						<div class="content-title">User Management</div>
+						<hr class="hr-line">
+						<div class="content-word">
+							List of Active Users<button class="btn-add">ADD USER</button>
+						<table class="styled-table">
+							<thead>
+								<tr>
+									<th style="width: 3%;">No.</th>
+									<th style="width: 15%;">Name</th>
+									<th style="width: 35%">Email</th>
+									<th style="width: 17%;">Roles</th>
+									<th style="width: 20%;">Last Modified</th>
+									<th style="width: 10%;">Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>ipdc_afiq</td>
+									<td>afiq@email.com</td>
+									<td>Admin</td>
+									<td>12 Sep 2021</td>
+									<td><button class="btn-update"><i class='bx bx-pencil bx-sm'></i></button><button class="btn-delete"><i class='bx bx-trash bx-sm'></i></button></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>ipdc_adha</td>
+									<td>adha@email.com</td>
+									<td>Admin</td>
+									<td>16 Aug 2021</td>
+									<td><button class="btn-update"><i class='bx bx-pencil bx-sm'></i></button><button class="btn-delete"><i class='bx bx-trash bx-sm'></i></button></td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>ipdc_daus</td>
+									<td>daus@email.com</td>
+									<td>Operator</td>
+									<td>18 Mar 2021</td>
+									<td><button class="btn-update"><i class='bx bx-pencil bx-sm'></i></button><button class="btn-delete"><i class='bx bx-trash bx-sm'></i></button></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+						</div>
+					</div>
+				<div class="item-content node_management" id="node_management">
+					<div class="content-title">Node Management</div>
+					<div class="content-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+				</div>
+				<div class="item-content config_backup" id="config_backup">
+					<div class="content-title">Config Backup</div>
+					<div class="content-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+				</div>
+				<div class="item-content server_cli" id="server_cli">
+					<div class="content-title">Server Cli</div>
+					<div class="content-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+				</div>
+			</div>
+			<div class=copyright>©Copyright 2021 IPDC Solutions Pte Ltd</div>
+		</section>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="home-frontend.js"></script>
+	</body>
+</html>
